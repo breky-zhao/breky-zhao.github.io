@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Hexo + Github | Breky</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Hexo + Github</h1><a id="logo" href="/.">Breky</a><p class="description">Breky's Personal Blog</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Hexo + Github</h1><div class="post-meta">Feb 8, 2017<span> | </span><span class="category"><a href="/categories/操作记录/">操作记录</a></span></div><a data-thread-key="2017/02/08/hexo+github/" href="/2017/02/08/hexo+github/#comments" class="ds-thread-count"></a><div class="post-content"><p>搞了这么几天，终于把这个「Hexo」给搞完了，现在把整个操作过程放在这里。<br><a id="more"></a></p>
+<p>整个过程分这么几个步骤：</p>
+<ol>
+<li>建立「Github」的「repository」</li>
+<li>安装「Hexo」</li>
+<li>安装「Git」</li>
+<li>本地文件上传至「Github」的「repository」中</li>
+</ol>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><h3 id="建立「Github」的「repository」"><a href="#建立「Github」的「repository」" class="headerlink" title="建立「Github」的「repository」"></a>建立「Github」的「repository」</h3><ol>
+<li><p>创建 <a href="https://github.com/" target="_blank" rel="external">Github</a> 账号</p>
+<p> <img src="http://okofe54b0.bkt.clouddn.com/image/githubgithub-1.png" alt="图1"></p>
+</li>
+<li><p>登录后，单击右上角「＋」号，再选择「New Repository」</p>
+<p> <img src="http://okofe54b0.bkt.clouddn.com/image/githubgithub-new-repository-2.png" alt="图2"></p>
+</li>
+<li><p>「New Repository」详细内容</p>
+<p> <img src="http://okofe54b0.bkt.clouddn.com/image/githubgithub-new-repository-3.png" alt="图3"></p>
+<p> 其中:</p>
+<p>  「Rpository Name」: yourusrname.github.io，比如: breky-zhao.github.io </p>
+<p>   勾选「initialize this repository with a README」，其实吧，选不选无所谓，后期如果使用可以再加入</p>
+</li>
+<li><p>最后，单击「Create repository」</p>
+</li>
+</ol>
+<p><strong><font color="red">建立「Github」的「repository」，完</font></strong></p>
+<hr>
+<h3 id="安装「Hexo」"><a href="#安装「Hexo」" class="headerlink" title="安装「Hexo」"></a>安装「Hexo」</h3><ol>
+<li><p>安装「node.js」  </p>
+<pre><code>sudo apt-get install nodejs
+</code></pre></li>
+<li><p>安装「npm」  </p>
+<pre><code>sudo apt-get install npm
+</code></pre></li>
+<li><p>安装「Hexo」  </p>
+<pre><code>npm install hexo-cli g
+</code></pre></li>
+</ol>
+<p><strong><font color="red">安装「Hexo」，完</font></strong></p>
+<hr>
+<h3 id="安装「Git」"><a href="#安装「Git」" class="headerlink" title="安装「Git」"></a>安装「Git」</h3><pre><code>sudo apt-get install git
+</code></pre><p><strong><font color="red">安装「Git」，完</font></strong></p>
+<hr>
+<h3 id="本地文件上传至「Github」中的「Repository」中"><a href="#本地文件上传至「Github」中的「Repository」中" class="headerlink" title="本地文件上传至「Github」中的「Repository」中"></a>本地文件上传至「Github」中的「Repository」中</h3><ol>
+<li><p>创建本地「Repository」  </p>
+<p>这个怎样说都好，说是本地「Repository」或者是本地仓库，说是「Hexo」目录，都可以。在某个地方，新建个文件夹，比如： </p>
+<pre><code>mkdir xxx.github.io //目录名与「Github」中的「Repository」同名    
+</code></pre></li>
+<li><p>用「Hexo」初始化本地仓库<strong><font color="red"> 注1</font></strong></p>
+<pre><code>cd xxx.github.io //进入本地仓库
+hexo init //「Hexo」初始化本地仓库
+hexo g //同「hexo generate」生成静态页面和文件
+hexo s //开启「Hexo」本地服务器，详见注1
+</code></pre></li>
+<li><p>用「Git」初始化本地仓库</p>
+<pre><code>git init
+</code></pre></li>
+<li><p>安装「Hexo」上传工具  </p>
+<pre><code>npm install hexo-deployer-git --save
+</code></pre></li>
+<li><p>配置「_config.yml」文件<strong><font color="red"> 注2</font></strong> </p>
+<p>进入本地仓库后，可以找到「_config.yml」这个文件。内容需要稍作修改。<img src="http://okofe54b0.bkt.clouddn.com/image/githubgithub-config-4.png" alt="图4">  </p>
+<p>其中：  </p>
+<p>   <strong><font color="red">特别注意：_config.yml中所有冒号后都有空格</font></strong></p>
+<pre><code>title： //网站标题
+subtitle: //网站副标题
+...
+author: //作者
+language: //语言
+...
+url: //https://usrname.github.io。其实，在仓库设置中可以找到。
+root: //就用「/」不要改，如果改了，网站可能没有样式（找不到「CSS」文件夹） 
+</code></pre><p> <img src="http://okofe54b0.bkt.clouddn.com/image/githubgithub-config-5.png" alt="图5">  </p>
+<p> 其中：</p>
+<pre><code>type: git
+repo: https://github.com/usrname/usrname.github.io.git //这个在仓库「clone」那里能找到，是个「Https」链接，详见注2
+branch: master
+</code></pre></li>
+<li><p>本地仓库中的文件，上传至「Github」中的「Repository」中  </p>
+<pre><code>hexo clean //删除已生成的文件和缓存
+hexo g //
+hexo d //同「hexo deploy」上传。这个过程中会要过程会要求输入「github」账号和密码
+</code></pre></li>
+</ol>
+<p><strong><font color="red">本地文件上传至「Github」中的「Repository」中，完</font></strong></p>
+<hr>
+<p><strong><font color="red"> 注1:</font></strong>  </p>
+<p><img src="http://okofe54b0.bkt.clouddn.com/image/githubgithub-hexo-s-6.png" alt="图6">  </p>
+<p>如图，浏览器中输入  </p>
+<p><a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> </p>
+<p>可以本地浏览网站  </p>
+<p>若需停止服务，按组合键「Ctrl + C」</p>
+<p>执行命令「hexo s」后，报错，错误代码如下或类似：</p>
+<pre><code>Port 4000 has been used.//4000端口被占用
+</code></pre><p>处理方法，很简单，重启或注销</p>
+<p><strong><font color="red"> 注2:</font></strong>  </p>
+<p><img src="http://okofe54b0.bkt.clouddn.com/image/githubgithub-hhps-7.png" alt="图7"></p>
+<p>在如图的位置，可以找到仓库的「Https」链接。</p>
+<hr>
+<p>以上，全文完。</p>
+</div><div class="tags"><a href="/tags/Hexo/">Hexo</a><a href="/tags/Github/">Github</a></div><div class="post-nav"><a href="/2017/02/04/give-up-lofter/" class="next">放弃「Lofter」博客</a></div><div data-thread-key="2017/02/08/hexo+github/" data-title="Hexo + Github" data-url="https://breky-zhao.github.io/2017/02/08/hexo+github/" class="ds-share flat"><div class="ds-share-inline"><ul class="ds-share-icons-16"><li data-toggle="ds-share-icons-more"><a href="javascript:void(0);" class="ds-more">分享到：</a></li><li><a href="javascript:void(0);" data-service="weibo" class="ds-weibo">微博</a></li><li><a href="javascript:void(0);" data-service="qzone" class="ds-qzone">QQ空间</a></li><li><a href="javascript:void(0);" data-service="qqt" class="ds-qqt">腾讯微博</a></li><li><a href="javascript:void(0);" data-service="wechat" class="ds-wechat">微信</a></li></ul><div class="ds-share-icons-more"></div></div></div><div data-thread-key="2017/02/08/hexo+github/" data-title="Hexo + Github" data-url="https://breky-zhao.github.io/2017/02/08/hexo+github/" data-author-key="1" class="ds-thread"></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/操作记录/">操作记录</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/闲谈/">闲谈</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Lofter/" style="font-size: 15px;">Lofter</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/Github/" style="font-size: 15px;">Github</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/08/hexo+github/">Hexo + Github</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/04/give-up-lofter/">放弃「Lofter」博客</a></li></ul></div><div class="widget"><div class="comments-title"><i class="fa fa-comment-o"> 最近评论</i></div><div data-num-items="5" data-show-avatars="0" data-show-time="1" data-show-admin="0" data-excerpt-length="32" data-show-title="1" class="ds-recent-comments"></div></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">Breky.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script>var duoshuoQuery = {short_name:'breky'};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
