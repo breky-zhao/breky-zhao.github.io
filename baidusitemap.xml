@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+    
+  <url>
+    <loc>https://breky-zhao.github.io/2017/02/08/hexo+github/</loc>
+    <lastmod>2017-02-08T12:26:21.457Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo + Github</title>
+        <pubTime>2017-02-08T12:26:21.457Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>Github</tag>
+         
+         
+           
+             
+              <breadCrumb title="操作记录" url="https://breky-zhao.github.io/categories/%E6%93%8D%E4%BD%9C%E8%AE%B0%E5%BD%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://breky-zhao.github.io/2017/02/04/give-up-lofter/</loc>
+    <lastmod>2017-02-04T04:55:07.210Z</lastmod>
+    <data>
+        <display>
+        <title>放弃「Lofter」博客</title>
+        <pubTime>2017-02-04T04:55:07.210Z</pubTime>
+        
+        <tag>Lofter</tag>
+         
+         
+           
+             
+              <breadCrumb title="闲谈" url="https://breky-zhao.github.io/categories/%E9%97%B2%E8%B0%88/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+</urlset>
