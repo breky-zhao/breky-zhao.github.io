@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Markdown编辑器:Mango | Breky</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Markdown编辑器:Mango</h1><a id="logo" href="/.">Breky</a><p class="description">Breky's Personal Blog</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Markdown编辑器:Mango</h1><div class="post-meta">Feb 9, 2017<span> | </span><span class="category"><a href="/categories/操作记录/">操作记录</a></span></div><a data-thread-key="2017/02/09/mango/" href="/2017/02/09/mango/#comments" class="ds-thread-count"></a><div class="post-content"><p>前几天，在「Linux(Elementary OS)」中搞完了「Github + Hexo」搭建个人博客，<a href="http://breky.win/2017/02/08/hexo+github/" target="_blank" rel="external">这是链接</a>。这篇文章记录下「Linux」中的「Markdown」编辑器「<a href="https://github.com/egrcc/Mango" target="_blank" rel="external">Mango</a>」<a id="more"></a> </p>
+<p>在哪篇文章中发现的「Mango」,我忘记了，在这里对那位作者道谦了，不好意思。</p>
+<p>先放张「Mango」的预览图<br><img src="http://okofe54b0.bkt.clouddn.com/image/mango/mango-0.png" alt="图0"></p>
+<h3 id="下载「Mango」"><a href="#下载「Mango」" class="headerlink" title="下载「Mango」"></a>下载「Mango」</h3><p>「<a href="https://github.com/egrcc/Mango" target="_blank" rel="external">Mango</a>」,这是「Mango」开发者的项目仓库，在这里可以下载。</p>
+<h3 id="安装「Mango」"><a href="#安装「Mango」" class="headerlink" title="安装「Mango」"></a>安装「Mango」</h3><p>下载，解压后的内容:  </p>
+<ul>
+<li>压缩包和解压后的「mango-xxx」文件夹<br><img src="http://okofe54b0.bkt.clouddn.com/image/mango/mango-1.png" alt="图1">  </li>
+<li>「mango-xx」文件夹中的内容<br><img src="http://okofe54b0.bkt.clouddn.com/image/mango/mango-2.png" alt="图2"></li>
+</ul>
+<p>其中：<br>「mango-xxx」文件夹中的「mango」是启动文件，启动方式：</p>
+<pre><code>//进入启动文件「mango」所在的文件夹  
+./mango
+</code></pre><p>即可。</p>
+<h3 id="创建快捷方式"><a href="#创建快捷方式" class="headerlink" title="创建快捷方式"></a>创建快捷方式</h3><p>我的系统是「Elementary 0.4」,基于「Ubuntu」的一个「Linux」发行版，其他的「Linux」版本成不成，我不知道，没试过。  </p>
+<ul>
+<li><p>创建「xxx.sh」文件,就是「Linux」中的「Bash」文件  </p>
+<p>以「mango.sh」为例：  </p>
+</li>
+</ul>
+<pre><code>cd mango-xxx//进入「mang-xxx」文件夹  
+vim mango.sh//用「vim」编辑器创建「mango.sh」文件  
+</code></pre><p>  这是「mango.sh」文件中的内容：<br>  <img src="http://okofe54b0.bkt.clouddn.com/image/mango/mango-3.png" alt="图3"></p>
+<p>  其中：</p>
+<pre><code>#bash//对于现在的兼容性来说，写不写都行，只是个说明  
+cd ~/mango//进入「mango」文件夹  
+&amp;&amp;//连接前后两条命令  
+./mango//运行「mango」  
+</code></pre><ul>
+<li>创建图标<br>网上找个「PNG」格式的图标放在「mango-xxx」文件夹中就好了，名字改简单点</li>
+</ul>
+<ul>
+<li><p>创建快捷方式  </p>
+<p>在「/usr/share/applications」文件夹中创建「mango.desktop」文件,名字随意，后缀不变，内容如下：  </p>
+</li>
+</ul>
+<pre><code>[Desktop Entry]  
+Encoding=UTF-8  
+Version=1.0  
+Name=Mango  
+GenericName=Mango  
+Exec=sh /home/breky/mango/mango.sh  
+Terminal=false  
+Icon=/home/breky/mango/mango.png  
+Type=Application  
+Comment=Pycharm IDE  
+Categories=Application;  
+</code></pre><p>  其中：</p>
+<ol>
+<li>[Exec=sh /home/breky/mango/mango.sh] 这句，[sh]和后面的[/home/breky/mango/mango.sh]之间有个空格，[breky]是我的用户文件夹，[mango]就是[mango-xxx]文件夹，只是移到这里了。</li>
+<li>[Icon=/home/breky/mango/mango.png] 这句是图标</li>
+</ol>
+<p>参考文章：<a href="http://blog.csdn.net/hunyxv/article/details/52761086" target="_blank" rel="external">Ubuntu16.04下创建桌面快捷方式</a></p>
+<hr>
+<p>以上，完</p>
+</div><div class="tags"><a href="/tags/Hexo/">Hexo</a><a href="/tags/Github/">Github</a><a href="/tags/Linux/">Linux</a><a href="/tags/Elementary/">Elementary</a><a href="/tags/Markdown/">Markdown</a><a href="/tags/Mango/">Mango</a><a href="/tags/个人博客/">个人博客</a></div><div class="post-nav"><a href="/2017/02/08/hexo+github/" class="next">Hexo + Github</a></div><div data-thread-key="2017/02/09/mango/" data-title="Markdown编辑器:Mango" data-url="https://breky-zhao.github.io/2017/02/09/mango/" class="ds-share flat"><div class="ds-share-inline"><ul class="ds-share-icons-16"><li data-toggle="ds-share-icons-more"><a href="javascript:void(0);" class="ds-more">分享到：</a></li><li><a href="javascript:void(0);" data-service="weibo" class="ds-weibo">微博</a></li><li><a href="javascript:void(0);" data-service="qzone" class="ds-qzone">QQ空间</a></li><li><a href="javascript:void(0);" data-service="qqt" class="ds-qqt">腾讯微博</a></li><li><a href="javascript:void(0);" data-service="wechat" class="ds-wechat">微信</a></li></ul><div class="ds-share-icons-more"></div></div></div><div data-thread-key="2017/02/09/mango/" data-title="Markdown编辑器:Mango" data-url="https://breky-zhao.github.io/2017/02/09/mango/" data-author-key="1" class="ds-thread"></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/操作记录/">操作记录</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/闲谈/">闲谈</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Lofter/" style="font-size: 15px;">Lofter</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/Github/" style="font-size: 15px;">Github</a> <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/Elementary/" style="font-size: 15px;">Elementary</a> <a href="/tags/Markdown/" style="font-size: 15px;">Markdown</a> <a href="/tags/Mango/" style="font-size: 15px;">Mango</a> <a href="/tags/个人博客/" style="font-size: 15px;">个人博客</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/09/mango/">Markdown编辑器:Mango</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/08/hexo+github/">Hexo + Github</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/04/give-up-lofter/">放弃「Lofter」博客</a></li></ul></div><div class="widget"><div class="comments-title"><i class="fa fa-comment-o"> 最近评论</i></div><div data-num-items="5" data-show-avatars="0" data-show-time="1" data-show-admin="0" data-excerpt-length="32" data-show-title="1" class="ds-recent-comments"></div></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">Breky.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script>var duoshuoQuery = {short_name:'breky'};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
