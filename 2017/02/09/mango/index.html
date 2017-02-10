@@ -7,20 +7,25 @@
 <li>压缩包和解压后的「mango-xxx」文件夹<br><img src="http://okofe54b0.bkt.clouddn.com/image/mango/mango-1.png" alt="图1">  </li>
 <li>「mango-xx」文件夹中的内容<br><img src="http://okofe54b0.bkt.clouddn.com/image/mango/mango-2.png" alt="图2"></li>
 </ul>
-<p>其中：<br>「mango-xxx」文件夹中的「mango」是启动文件，启动方式：  </p>
-<p>//进入启动文件「mango」所在的文件夹<br>./mango  </p>
-<p>即可。</p>
+<p>其中：<br>「mango-xxx」文件夹中的「mango」是启动文件，启动方式：</p>
+<pre><code>//进入启动文件「mango」所在的文件夹  
+./mango
+</code></pre><p>即可。</p>
 <h3 id="创建快捷方式"><a href="#创建快捷方式" class="headerlink" title="创建快捷方式"></a>创建快捷方式</h3><p>我的系统是「Elementary 0.4」,基于「Ubuntu」的一个「Linux」发行版，其他的「Linux」版本成不成，我不知道，没试过。  </p>
 <ul>
 <li><p>创建「xxx.sh」文件,就是「Linux」中的「Bash」文件  </p>
-<p>以「mango.sh」为例：   </p>
+<p>以「mango.sh」为例：  </p>
 </li>
 </ul>
-<p>cd mango-xxx//进入「mang-xxx」文件夹<br>vim mango.sh//用「vim」编辑器创建「mango.sh」文件  </p>
-<p>  这是「mango.sh」文件中的内容：<br>  <img src="http://okofe54b0.bkt.clouddn.com/image/mango/mango-3.png" alt="图3"></p>
+<pre><code>cd mango-xxx//进入「mang-xxx」文件夹  
+vim mango.sh//用「vim」编辑器创建「mango.sh」文件  
+</code></pre><p>  这是「mango.sh」文件中的内容：<br>  <img src="http://okofe54b0.bkt.clouddn.com/image/mango/mango-3.png" alt="图3"></p>
 <p>  其中：</p>
-<p>#bash//对于现在的兼容性来说，写不写都行，只是个说明<br>cd ~/mango//进入「mango」文件夹<br>&amp;&amp;//连接前后两条命令<br>./mango//运行「mango」  </p>
-<ul>
+<pre><code>1. #bash//对于现在的兼容性来说，写不写都行，只是个说明  
+2. cd ~/mango//进入「mango」文件夹  
+3. &amp;&amp;//连接前后两条命令  
+4. ./mango//运行「mango」  
+</code></pre><ul>
 <li>创建图标<br>网上找个「PNG」格式的图标放在「mango-xxx」文件夹中就好了，名字改简单点</li>
 </ul>
 <ul>
@@ -28,8 +33,18 @@
 <p>在「/usr/share/applications」文件夹中创建「mango.desktop」文件,名字随意，后缀不变，内容如下：  </p>
 </li>
 </ul>
-<p>[Desktop Entry]<br>Encoding=UTF-8<br>Version=1.0<br>Name=Mango<br>GenericName=Mango<br>Exec=sh /home/breky/mango/mango.sh<br>Terminal=false<br>Icon=/home/breky/mango/mango.png<br>Type=Application<br>Comment=Pycharm IDE<br>Categories=Application;  </p>
-<p>  其中：</p>
+<pre><code>[Desktop Entry]  
+Encoding=UTF-8  
+Version=1.0  
+Name=Mango  
+GenericName=Mango  
+Exec=sh /home/breky/mango/mango.sh  
+Terminal=false  
+Icon=/home/breky/mango/mango.png  
+Type=Application  
+Comment=Pycharm IDE  
+Categories=Application;  
+</code></pre><p>  其中：</p>
 <ol>
 <li>[Exec=sh /home/breky/mango/mango.sh] 这句，[sh]和后面的[/home/breky/mango/mango.sh]之间有个空格，[breky]是我的用户文件夹，[mango]就是[mango-xxx]文件夹，只是移到这里了。</li>
 <li>[Icon=/home/breky/mango/mango.png] 这句是图标</li>
